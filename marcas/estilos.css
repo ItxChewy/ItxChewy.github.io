@@ -1,0 +1,213 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.contenedor {
+	width: 100%;
+	max-width: 1000px;
+	margin: 1em auto;
+	display: grid;
+	grid-gap: 1em;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+
+	grid-template-areas: "header header header"
+                        "nav nav nav"
+						 "contenido11 contenido21 contenido31"
+						 "formulario formulario tabla"
+						 "footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .nav,
+.contenedor .contenido,
+.contenedor .formulario
+.contenedor .footer {
+	background: #fff;
+	padding: 1em;
+	border-radius: 0.4em;
+}
+
+.contenedor .header {
+	background-image: url(imagenes/cabecera.jfif);
+    background-size: cover;
+    background-position: center;
+	grid-area: header;
+}
+.header h2{
+    text-shadow:2px 2px #ff0000;
+    text-align: center;
+    
+}
+
+.contenedor .nav{
+    background: #12203E;
+	color: #fff;
+    grid-area: nav;
+}
+.quenvuelve{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.textonav{
+    width: 50%;
+    display: flex;
+    justify-content: space-around
+}
+.textonav p{
+    text-align: start;
+}
+.navegacion{
+   align-items: end;
+   display: flex;
+    justify-content: space-around;
+}
+.espacio{
+    padding: 5px;
+}
+.espacio p:hover{
+    background-color: #ff0000;
+    color: yellow;
+}
+
+
+.contenedor .contenido11 {
+	grid-area: contenido11;
+	background-color: grey;
+    height: 90%;
+}
+.contenido11{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: right;
+	flex-wrap: wrap;	
+}
+
+.imagenes {
+	position:relative;
+	margin-bottom: 0px;
+    box-shadow: black;
+    padding: 1px;
+    width: 30%;
+    height: 50%;
+    box-shadow: 0.5em 0.2em 1em rgb(235, 24, 147);
+}
+.imagenes img {
+	width:100%;
+	height:80%;
+	object-fit: cover;
+}
+.imagenes p{
+	background-color: #fff;
+	text-align: center;
+}
+.contenedor .contenido21{
+    grid-area: contenido21;
+    background-color: rgb(73, 160, 22);
+    height: 90%;
+}
+.contenido21 p{
+    text-align:justify;
+}
+.paracentar{
+    text-align: center;
+}
+.contenido21 img{
+    text-align: center;
+}
+.copamundo{
+    color: gold;
+}
+
+.contenedor .contenido31{
+    grid-area: contenido31;;
+	height: 90%;
+    background-color: lightblue;
+}
+.contenido31{
+    text-align:justify;
+}
+.contenido31 img{
+    border-radius: 50%;
+    width:130px;
+	height:130px;
+    align-content: center;
+}
+.pique{
+    color: blue;
+}
+
+
+
+.contenedor .formulario {
+	grid-area: formulario;
+	background-color: #c6df3b;
+	height: 400px;
+    width: 95%;
+}
+.formulario input{
+	width: 90%;
+	height: 40px;
+	
+	
+}
+.boton{
+	background-color: blue;
+	width: 100%;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	
+}
+.boton:hover{
+    background-color: yellow;
+    color: red;
+}
+
+
+.contenedor .tabla {
+	grid-area: tabla;
+	background-color: red;
+	
+}
+.tabla1 {
+    border-collapse: collapse;
+    margin: auto; 
+    margin-top: 1em;         
+    box-shadow: 0em 1em 0.5em white;
+}
+
+.tabla1 thead tr {
+    background-color: #0c0c0c;
+    color: #ffffff;   
+}
+
+.tabla1 th,
+.tabla1 td {
+    padding: 1em 1em;
+}
+.tabla1 tbody  {
+    background-color: grey;
+}
+
+.tabla1 tbody tr:hover {
+    background-color: #1CD3F4;
+    color: #ffffff;
+}
+
+
+
+
+.contenedor .footer{
+	grid-area: footer;
+    background-color: #9b2b0a;
+}
+.footer{
+	color: #fff;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
